@@ -1,0 +1,15 @@
+services:
+  figure:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+        - .:/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 4  
+              capabilities: [gpu]
+    tty: true
