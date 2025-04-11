@@ -1,5 +1,5 @@
 services:
-  figure:
+  toy_figure:
     build:
       context: .
       dockerfile: Dockerfile
